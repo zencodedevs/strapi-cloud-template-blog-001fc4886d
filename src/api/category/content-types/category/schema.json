@@ -15,6 +15,12 @@
     }
   },
   "attributes": {
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "category" 
+    },
     "categoryId": {
       "type": "uid",
       "targetField": "name"
