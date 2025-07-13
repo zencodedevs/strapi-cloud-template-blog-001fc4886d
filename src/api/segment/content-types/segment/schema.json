@@ -17,24 +17,17 @@
   "attributes": {
     "segmentId": {
       "type": "uid",
-      "targetField": "name"
+      "targetField": "",
+      "required": true
     },
     "name": {
       "type": "string",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
-    },
-    "status": {
-      "type": "enumeration",
-      "enum": [
-        "active",
-        "inactive"
-      ],
-      "default": "active"
+      },
+      "required": true
     }
   }
 }

@@ -28,7 +28,7 @@
       },
       "required": true
     },
-    "status": {
+    "sts": {
       "type": "enumeration",
       "default": "active",
       "enum": [

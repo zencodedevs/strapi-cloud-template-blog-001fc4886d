@@ -27,21 +27,21 @@
     },
     "name": {
       "type": "string",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "shortDescription": {
       "type": "text",
-      "maxLength": 255,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "maxLength": 255
     },
     "longDescription": {
       "type": "richtext",
@@ -53,24 +53,24 @@
     },
     "features": {
       "type": "component",
-      "repeatable": true,
-      "component": "product.feature",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "product.feature",
+      "repeatable": true
     },
     "interestRate": {
       "type": "float"
     },
-    "status": {
+    "sts": {
       "type": "enumeration",
+      "default": "active",
       "enum": [
         "active",
         "inactive"
-      ],
-      "default": "active"
+      ]
     },
     "category": {
       "type": "relation",
@@ -98,16 +98,16 @@
     },
     "image": {
       "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ],
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

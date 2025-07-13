@@ -419,7 +419,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    status: Schema.Attribute.Enumeration<['active', 'inactive']> &
+    sts: Schema.Attribute.Enumeration<['active', 'inactive']> &
       Schema.Attribute.DefaultTo<'active'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -460,7 +460,7 @@ export interface ApiMembershipMembership extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    status: Schema.Attribute.Enumeration<['active', 'inactive']> &
+    sts: Schema.Attribute.Enumeration<['active', 'inactive']> &
       Schema.Attribute.DefaultTo<'active'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -547,7 +547,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
-    status: Schema.Attribute.Enumeration<['active', 'inactive']> &
+    sts: Schema.Attribute.Enumeration<['active', 'inactive']> &
       Schema.Attribute.DefaultTo<'active'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -587,9 +587,7 @@ export interface ApiSegmentSegment extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    segmentId: Schema.Attribute.UID<'name'>;
-    status: Schema.Attribute.Enumeration<['active', 'inactive']> &
-      Schema.Attribute.DefaultTo<'active'>;
+    segmentId: Schema.Attribute.UID<''> & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
