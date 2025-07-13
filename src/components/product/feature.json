@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_product_features",
+  "info": {
+    "displayName": "Feature",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "featureKey": {
+      "type": "string",
+      "required": true
+    },
+    "featureLabel": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "icon": {
+      "type": "string"
+    }
+  }
+}
