@@ -15,6 +15,7 @@ export interface ProductFeature extends Struct.ComponentSchema {
           localized: true;
         };
       }>;
+    ico: Schema.Attribute.Media<'images'>;
     icon: Schema.Attribute.String;
   };
 }
